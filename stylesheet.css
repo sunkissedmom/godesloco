@@ -9,7 +9,7 @@ body {
 
 header {
     background-color: #bbd9e2;
-    color: #131212;
+    color: rgb(19, 18, 18);
     background-color: #c2e0e9;
     box-sizing: content-box;    
     display: flex;
