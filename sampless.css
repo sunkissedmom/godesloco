@@ -128,55 +128,6 @@ h2 {
     display: block;
 }
 
-/* Hamburger icon (hidden on desktop) */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    margin-left: auto;
-}
-
-.hamburger span {
-    height: 3px;
-    width: 25px;
-    background-color: #fff;
-    margin: 4px 0;
-}
-
-/* Responsive layout for mobile screens */
-@media (max-width: 768px) {
-
-    /* Hide the nav links and show hamburger icon */
-    #nav_menu a,
-    .dropdown {
-        display: none;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    /* Show menu items when toggled */
-    #nav_menu.active {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #nav_menu.active a,
-    #nav_menu.active .dropdown {
-        display: block;
-        text-align: center;
-        padding: 10px;
-    }
-
-    /* Dropdown styling for mobile */
-    .dropdown-content {
-        position: relative;
-        top: 0;
-        box-shadow: none;
-    }
-}
-
 section {
     margin-top: 2em;
 }
@@ -256,7 +207,8 @@ section {
 @media (max-width: 768px) {
 
     .bio-card,
-    .header-img {
+    .header-img,
+    #nav_menu {
         width: 100%;
     }
 }
@@ -264,7 +216,8 @@ section {
 @media (min-width: 769px) and (max-width: 1024px) {
 
     .bio-card,
-    .header-img {
+    .header-img,
+    #nav_menu {
         width: calc(45% - 20px);
     }
 }
@@ -272,7 +225,8 @@ section {
 @media (min-width: 1025px) {
 
     .bio-card,
-    .header-img {
+    .header-img,
+    #nav_menu {
         width: calc(25% - 15px);
     }
 }
