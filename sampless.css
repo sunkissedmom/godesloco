@@ -72,6 +72,7 @@ h2 {
     display: flex;
     justify-content: center;
     background-color: #ffffff;
+    flex-wrap: wrap; /* Allow links to wrap when screen size is small */
 }
 
 #nav_menu a {
@@ -79,6 +80,7 @@ h2 {
     padding: 1em;
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 16px;
 }
 
 #nav_menu a:hover {
@@ -86,6 +88,11 @@ h2 {
 }
 
 /* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
 .dropbtn {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
@@ -96,9 +103,8 @@ h2 {
     cursor: pointer;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+.dropbtn:hover {
+    background-color: #ECA427;
 }
 
 .dropdown-content {
@@ -106,6 +112,7 @@ h2 {
     position: absolute;
     background-color: #f9f9f9;
     min-width: auto;
+    z-index: 1;
 }
 
 .dropdown-content a {
@@ -115,18 +122,47 @@ h2 {
     text-align: left;
 }
 
-/* hover */
 .dropdown-content a:hover {
     background-color: #ddd;
-}
-
-.dropbtn:hover {
-    background-color: #ECA427;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+/* Responsive Styles for Mobile/Tablet */
+@media screen and (max-width: 768px) {
+    #nav_menu {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center;    /* Center items horizontally */
+    }
+
+    #nav_menu a {
+        width: 100%; /* Make each link take up full width on small screens */
+        padding: 1em;
+        text-align: center;  /* Center the text inside each link */
+        font-size: 18px;     /* Increase font size for readability */
+    }
+
+    .dropdown {
+        width: 100%; /* Make the dropdown take up full width */
+    }
+
+    .dropbtn {
+        width: 100%;  /* Make dropdown button take full width */
+        text-align: center;  /* Center the button text */
+    }
+
+    .dropdown-content {
+        position: static; /* Make dropdown content part of the flow */
+        width: 100%; /* Make dropdown menu items take up full width */
+    }
+
+    .dropdown-content a {
+        padding-left: 20px; /* Add padding for the dropdown items */
+    }
+}
+
 
 section {
     margin-top: 2em;
