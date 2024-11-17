@@ -43,24 +43,18 @@ footer {
     max-width: 100%;
 }
 
+.main-container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 .container {
     width: 80%;
     margin: auto;
     padding: 1em;
 }
-
-.container1 {
-    width: 80%;
-    margin: auto;
-    padding: 1em;
-}
-
-.container2 {
-    width: 80%;
-    margin: auto;
-    padding: 1em;
-}
-
 
 h1,
 h2 {
@@ -132,16 +126,17 @@ section {
     margin-top: 2em;
 }
 
-.local {
+.orange {
     margin-bottom: 1em;
-    padding: 3em;
+    padding: 2em;
     background-color: #ebb65b;
 }
 
 .mission,
 .events,
 .contact,
-.roundedblock {
+.roundedblock
+.grid-event {
     margin-bottom: 2em;
     padding: 1em;
     background-color: #e3e3e3;
@@ -152,16 +147,37 @@ section {
     font-size: 0.9em;
 }
 
-/* Rounded Bio About Page */
-.bio-section {
+.main-container {
     display: flex;
+    flex: 1;
+    padding: 20px;
+  }
+
+/* Sidebar */
+  .sidebar {
+    background-color: #f4f4f4;
+    width: 200px;
+    padding: 20px;
+  }
+
+/* Main content area */
+  .content {
+    flex: 1;
+    background-color: #e2e2e2;
+    padding: 20px;
+  }
+  
+/* Grids */
+.grid-section {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     max-width: 95%;
 }
 
-.bio-card {
+.grid-item {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -169,13 +185,13 @@ section {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s;
-}
 
-.bio-card:hover {
+}
+.grid-item:hover {
     transform: translateY(-5px);
 }
 
-.bio-photo {
+.grid-photo {
     width: 95%;
     max-width: 1000px;
     aspect-ratio: 1 / 1;
@@ -184,20 +200,20 @@ section {
     margin-bottom: 15px;
 }
 
-.bio-name {
+.grid-label {
     font-size: 1.4em;
     color: #333;
     margin-bottom: 5px;
 }
 
-.bio-position {
+.grid-sublabel {
     font-size: 1em;
     color: #777;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-.bio-description {
+.grid-description {
     font-size: 0.9em;
     color: #555;
     line-height: 1.5;
@@ -205,21 +221,27 @@ section {
 
 /* Responsive Layout */
 @media (max-width: 768px) {
-    .bio-card,
+
+    .sidebar
+    .grid-item,
     .header-img {
         width: 100%;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .bio-card,
+
+    .sidebar
+    .grid-item,
     .header-img {
         width: calc(45% - 20px);
     }
 }
 
 @media (min-width: 1025px) {
-    .bio-card,
+
+    .sidebar
+    .grid-item,
     .header-img {
         width: calc(25% - 15px);
     }

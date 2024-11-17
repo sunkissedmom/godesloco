@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website with Flex & Grid Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* Header */
+    header {
+      background-color: #ffffff;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    /* Flex container for navigation menu */
+    .nav-container {
+      display: flex;
+      justify-content: space-evenly;
+      background-color: #333;
+      padding: 10px;
+    }
+
+    /* Flex items (navigation links) */
+    .nav-item {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: background-color 0.3s;
+    }
+
+    /* Hover effect for navigation items */
+    .nav-item:hover {
+      background-color: #575757;
+    }
+
+    /* Main container with flex for sidebar and content */
+    .main-container {
+      display: flex;
+      flex: 1;
+      padding: 20px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: #f4f4f4;
+      width: 200px;
+      padding: 20px;
+    }
+
+    /* Main content area */
+    .content {
+      flex: 1;
+      background-color: #e2e2e2;
+      padding: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Grid layout for the content section */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+      gap: 20px;
+    }
+
+    .grid-item {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .grid-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .grid-item h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Website with Flex & Grid Layout</h1>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav class="nav-container">
+    <a href="#" class="nav-item">Home</a>
+    <a href="#about" class="nav-item">About</a>
+    <a href="#services" class="nav-item">Services</a>
+    <a href="#contact" class="nav-item">Contact</a>
+  </nav>
+
+  <!-- Main Content Area (Sidebar + Grid Layout) -->
+  <div class="main-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Sidebar</h3>
+      <p>Links, info, or ads go here.</p>
+    </aside>
+
+    <!-- Content Section with Grid Layout -->
+    <div class="content">
+      <h2>Main Content</h2>
+      <p>This is where the main content of the page goes. Below is a responsive grid layout:</p>
+
+      <!-- Grid Layout -->
+      <div class="grid-container">
+        <div class="grid-item">
+          <h3>Article 1</h3>
+          <p>This is a short description of Article 1. It can be a summary of a blog post or a product description.</p>
+        </div>
+
+        <div class="grid-item">
+          <h3>Article 2</h3>
+          <p>This is a short description of Article 2. It can be a summary of a blog post or a product description.</p>
+        </div>
+
+        <div class="grid-item">
+          <h3>Article 3</h3>
+          <p>This is a short description of Article 3. It can be a summary of a blog post or a product description.</p>
+        </div>
+
+        <div class="grid-item">
+          <h3>Article 4</h3>
+          <p>This is a short description of Article 4. It can be a summary of a blog post or a product description.</p>
+        </div>
+
+        <div class="grid-item">
+          <h3>Article 5</h3>
+          <p>This is a short description of Article 5. It can be a summary of a blog post or a product description.</p>
+        </div>
+
+        <div class="grid-item">
+          <h3>Article 6</h3>
+          <p>This is a short description of Article 6. It can be a summary of a blog post or a product description.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Footer Content</p>
+  </footer>
+
+</body>
+</html>
