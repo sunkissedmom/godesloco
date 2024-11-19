@@ -1,0 +1,6 @@
+
+1a. Scaled down member portraits in "About" page.
+2a. Swap Events and Blog/Move 'Resources' move to second item (this one is entirely opinion). 
+
+1b. Correct CSS container class by adding missing period.
+2b. Update CSS from multiple container classes (.container, .container1, .container2) to just a single container class. 

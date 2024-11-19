@@ -72,6 +72,8 @@ h2 {
 #nav_menu a {
     color: rgb(7, 0, 0);
     padding: 1em;
+    justify-content: center;
+
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -110,7 +112,7 @@ h2 {
 .dropdown-content a {
     color: black;
     text-decoration: none;
-    display: block;
+    display: flex;
     text-align: left;
 }
 
@@ -224,7 +226,8 @@ section {
 
     .sidebar
     .grid-item,
-    .header-img {
+    .header-img
+    .grid-photo {
         width: 100%;
     }
 }
@@ -233,7 +236,8 @@ section {
 
     .sidebar
     .grid-item,
-    .header-img {
+    .header-img     
+    .grid-photo {
         width: calc(45% - 20px);
     }
 }
@@ -242,6 +246,7 @@ section {
 
     .sidebar
     .grid-item,
+    .grid-photo 
     .header-img {
         width: calc(25% - 15px);
     }

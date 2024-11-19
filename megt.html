@@ -6,25 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Website</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" type="image/png" href="images/website_favicon.svg">
 </head>
 
 <header>
     <!--This image will be updated with professional logo -->
-    <img src="god_es_loco.svg" alt="my daughters art" style="float: left; margin-right: 15px; height: auto;">
+    <img src="images/god_es_loco.svg" alt="my daughters art" style="float: left; margin-right: 15px; height: auto;">
 </header>
 
 <nav id="nav_menu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="events.html">Events</a>
-    <a href="megt.html">MEGT</a>
+    <a href="blog.html">Blog</a>
+    <div class="dropdown">
+        <button class="dropbtn"><a href="events.html">Events</a></button>
+        <div class="dropdown-content">
+            <a href="megt.html">Edible Garden Tour</a>
+        </div>
+    </div>
     <div class="dropdown">
         <button class="dropbtn">Resources</button>
         <div class="dropdown-content">
             <a href="https://docs.google.com/document/d/1JnZ9_Wp3t3qHdzAAvjRsXlpRCdYc4mTmePwH65pqvS4/edit?usp=sharing"
                 target="_blank">Meeting Minutes</a>
             <a href="#volunteer-signup">Volunteer Signup</a>
-            <a href="blog.html">Blog</a>
         </div>
     </div>
 </nav>
@@ -53,7 +58,8 @@
         <section id="contact" class="contact">
             <h2>Contact Us</h2>
             <p>Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
-            <strong>Email:</strong> @gmail.com
+            <img src="images/envelope-solid.svg" width="24" height="24" style="vertical-align: middle; margin-right: 5px;">
+            email@gmail.com
         </section>
     </div>
 </body>
