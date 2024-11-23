@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Parkinsans', sans-serif;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -58,6 +58,7 @@ footer {
 
 h1,
 h2 {
+    font-family: 'Parkinsans', sans-serif;
     color: #333;
 }
 
@@ -137,7 +138,7 @@ section {
 .mission,
 .events,
 .contact,
-.roundedblock
+.roundedblock,
 .grid-event {
     margin-bottom: 2em;
     padding: 1em;
@@ -149,26 +150,20 @@ section {
     font-size: 0.9em;
 }
 
-.main-container {
-    display: flex;
-    flex: 1;
-    padding: 20px;
-  }
-
 /* Sidebar */
-  .sidebar {
+.sidebar {
     background-color: #f4f4f4;
-    width: 200px;
+    width: 250px;
     padding: 20px;
-  }
+}
 
 /* Main content area */
-  .content {
+.content {
     flex: 1;
     background-color: #e2e2e2;
     padding: 20px;
-  }
-  
+}
+
 /* Grids */
 .grid-section {
     display: flex;
@@ -189,6 +184,7 @@ section {
     transition: transform 0.3s;
 
 }
+
 .grid-item:hover {
     transform: translateY(-5px);
 }
@@ -198,7 +194,7 @@ section {
     max-width: 1000px;
     aspect-ratio: 1 / 1;
     border-radius: 15px;
-    object-fit: cover;
+    object-fit: fill;
     margin-bottom: 15px;
 }
 
@@ -219,35 +215,76 @@ section {
     font-size: 0.9em;
     color: #555;
     line-height: 1.5;
+    flex: 1;
+    /* Makes text occupy the remaining space */
+}
+
+.event-description h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.event-description p {
+    margin: 5px 0 0;
+    color: #555;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.event-item {
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+    align-items: center;
+    text-align: left;
+    gap: 1em;
+    transition: transform 0.3s;
+
+}
+
+.event-item:hover {
+    transform: translateY(-5px);
+}
+
+.event-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Layout */
 @media (max-width: 768px) {
 
-    .sidebar
+    .sidebar,
+    .main-container,
     .grid-item,
-    .header-img
-    .grid-photo {
-        width: 100%;
-    }
+    .header-img,
+    {
+    width: 100%;
+}
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
-    .sidebar
+    .sidebar,
+    .main-container,
     .grid-item,
-    .header-img     
-    .grid-photo {
-        width: calc(45% - 20px);
-    }
+    .header-img,
+    {
+    width: calc(45% - 20px);
+}
 }
 
 @media (min-width: 1025px) {
 
-    .sidebar
+    .sidebar,
+    .main-container,
     .grid-item,
-    .grid-photo 
-    .header-img {
-        width: calc(25% - 15px);
-    }
+    .header-img,
+    {
+    width: calc(25% - 15px);
+}
 }
